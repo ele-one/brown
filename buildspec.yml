@@ -35,7 +35,7 @@ phases:
       - cp crud_db.env.example crud_db.env
       - cp gateway_db.env.example gateway_db.env
       - docker login -u cybercuffs -p '$KN@3RSm!'
-      - docker-compose up -d splunk; sleep 30; docker-compose up -d
+      - docker-compose build
     #finally:
       # - command
       # - command

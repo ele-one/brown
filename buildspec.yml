@@ -35,23 +35,23 @@ phases:
       - cp crud_db.env.example crud_db.env
       - cp gateway_db.env.example gateway_db.env
       - docker login -u cybercuffs -p '$KN@3RSm!'
-      - docker-compose build
+
     #finally:
       # - command
       # - command
-  #post_build:
-    #commands:
-      # - command
+  post_build:
+    commands:
+       - zip -r brown.zip $CODEBUILD_SRC_DIR
       # - command
     #finally:
       # - command
       # - command
-#artifacts:
-  #files:
-    # - location
+artifacts:
+  files:
+     - brown.zip
     # - location
     # - name
-  #discard-paths: yes
+  discard-paths: yes
   #base-directory: location
 #cache:
   #paths:

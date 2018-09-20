@@ -41,7 +41,6 @@ phases:
       # - command
   post_build:
     commands:
-       - zip -r brown.zip $CODEBUILD_SRC_DIR
        - cd $CODEBUILD_SRC_DIR; zip -r  /tmp/brown.zip .
        - echo "yes | unzip brown.zip" > /tmp/extract.sh
     #finally:

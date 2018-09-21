@@ -15,7 +15,7 @@ hooks:
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   BeforeInstall:
-    - location: /tmp/unzip.sh
+    - location: unzip.sh
       timeout:
       runas:
 

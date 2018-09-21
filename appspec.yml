@@ -9,3 +9,16 @@ files:
     
   - source: ./unzip.sh
     destination: /tmp
+    
+hooks:
+
+# During the BeforeInstall deployment lifecycle event, run the commands 
+#   in the script specified in "location".
+  BeforeInstall:
+    - location: /tmp/unzip.sh
+      timeout:
+      runas:
+
+# reference: https://docs.aws.amazon.com/codedeploy/latest/userguide/application-revisions-appspec-file.html?icmpid=docs_acd_console
+
+

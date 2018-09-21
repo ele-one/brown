@@ -3,3 +3,9 @@ os: linux
 files:
   - source: ./brown.zip
     destination: /tmp
+
+  - source: ./appspec.yml
+    destination: /tmp
+    
+  - source: ./unzip.sh
+    destination: /tmp

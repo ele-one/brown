@@ -41,17 +41,17 @@ phases:
       # - command
   post_build:
     commands:
-       - cd $CODEBUILD_SRC_DIR; zip -r  /home/brown.zip .
-       - cp $CODEBUILD_SRC_DIR/appspec.yml /home/appspec.yml
-       - echo "yes | unzip brown.zip; cd brown" > /home/unzip.sh
+       - cd $CODEBUILD_SRC_DIR; zip -r  /tmp/brown.zip .
+       - cp $CODEBUILD_SRC_DIR/appspec.yml /tmp/appspec.yml
+       - echo "yes | unzip brown.zip; cd brown" > /tmp/unzip.sh
     #finally:
       # - command
       # - command
 artifacts:
   files:
-     - /home/brown.zip
-     - /home/unzip.sh
-     - /home/appspec.yml
+     - /tmp/brown.zip
+     - /tmp/unzip.sh
+     - /tmp/appspec.yml
     # - name
   discard-paths: yes
   #base-directory: location

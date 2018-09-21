@@ -7,14 +7,14 @@ os: linux
 
 files:
   - source: ./brown.zip
-    destination: /home/
+    destination: /tmp
 
 hooks:
 
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   BeforeInstall:
-    - location: /home/unzip.sh
+    - location: /tmp/unzip.sh
       timeout:
       runas:
 

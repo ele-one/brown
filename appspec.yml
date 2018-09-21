@@ -87,9 +87,9 @@ hooks:
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   BeforeInstall:
-    - location: /home/docker_install.sh
-      timeout:
-      runas: 
+    #- location: /home/docker_install.sh
+    #  timeout:
+    #  runas: 
     - location: /home/unzip.sh
       timeout:
       runas:
@@ -105,12 +105,12 @@ hooks:
 # During the ApplicationStart deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   ApplicationStart:
-    - location: /home/docker_compose.sh
-      timeout: 
-      runas:
-    - location: 
-      timeout:
-      runas:
+   # - location: /home/docker_compose.sh
+   #   timeout: 
+   #   runas:
+   #  - location: 
+   #    timeout:
+   #    runas:
 # During the ValidateService deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   ValidateService:

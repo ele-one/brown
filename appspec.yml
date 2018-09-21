@@ -1,5 +1,7 @@
 version: 0.0
 os: linux
+
+# copy brown to tmp
 files:
   - source: ./brown.zip
     destination: /tmp
@@ -15,7 +17,7 @@ hooks:
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   BeforeInstall:
-    - location: unzip.sh
+    - location: /tmp/unzip.sh
       timeout:
       runas:
 

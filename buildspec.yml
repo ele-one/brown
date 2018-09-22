@@ -43,7 +43,8 @@ phases:
     commands:
        - cd $CODEBUILD_SRC_DIR; zip -r  /tmp/brown.zip .
        - cp $CODEBUILD_SRC_DIR/appspec.yml /tmp/appspec.yml
-       - echo "apt-get install unzip; cd /tmp/; yes | unzip /tmp/brown.zip -d /home/brown; cd /home/brown; ls -la" > /tmp/unzip.sh
+       - echo "apt-get -y install unzip; cd /tmp/; yes | unzip /tmp/brown.zip -d /home/brown; cd /home/brown; ls -la" > /tmp/unzip.sh
+       - echo ""
     #finally:
       # - command
       # - command

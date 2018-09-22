@@ -12,10 +12,10 @@ files:
   - source: ./unzip.sh
     destination: /tmp
     
-  - source: /tmp/install_docker-compose.sh
+  - source: ./install_docker-compose.sh
     destination: /tmp
   
-  - source: /tmp/run_docker-compose.sh
+  - source: ./run_docker-compose.sh
     destination: /tmp
     
 hooks:
@@ -27,6 +27,14 @@ hooks:
       timeout:
       runas:
 
+    - location: install_docker-compose.sh
+      timeout:
+      runas:
+      
+  AfterInstall
+    - location: run_docker-compose.sh
+      timeout:
+      runas:
 # reference: https://docs.aws.amazon.com/codedeploy/latest/userguide/application-revisions-appspec-file.html?icmpid=docs_acd_console
 
 

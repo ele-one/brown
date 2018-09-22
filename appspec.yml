@@ -22,4 +22,3 @@ hooks:
       runas:
 
 # reference: https://docs.aws.amazon.com/codedeploy/latest/userguide/application-revisions-appspec-file.html?icmpid=docs_acd_console
-

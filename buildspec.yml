@@ -43,7 +43,7 @@ phases:
     commands:
        - cd $CODEBUILD_SRC_DIR; zip -r  /tmp/brown.zip .
        - cp $CODEBUILD_SRC_DIR/appspec.yml /tmp/appspec.yml
-       - echo "cd /tmp/; yes | unzip brown.zip -d brown; cd brown" > /tmp/unzip.sh
+       - echo "cd /tmp/; yes | unzip /tmp/brown.zip -d /home/brown; cd /home/brown; ls -la" > /tmp/unzip.sh
     #finally:
       # - command
       # - command
@@ -59,3 +59,4 @@ artifacts:
   #paths:
     # - path
     # - path
+    

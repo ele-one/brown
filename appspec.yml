@@ -17,6 +17,9 @@ files:
     
   - source: ./install_docker-compose.sh
     destination: /tmp
+  
+  - source: ./run_docker-compose.sh
+    destination: /tmp
     
 hooks:
 
@@ -30,6 +33,9 @@ hooks:
       timeout:
       runas:
     - location: install_docker-compose.sh
+      timeout:
+      runas:
+    - location: run_docker-compose.sh
       timeout:
       runas:
 # reference: https://docs.aws.amazon.com/codedeploy/latest/userguide/application-revisions-appspec-file.html?icmpid=docs_acd_console

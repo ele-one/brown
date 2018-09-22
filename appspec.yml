@@ -20,11 +20,10 @@ hooks:
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   BeforeInstall:
-    - location: install_docker-compose.sh
-      timeout:
-      runas:
     - location: unzip.sh
       timeout:
       runas:
-
+    - location: install_docker-compose.sh
+      timeout:
+      runas:
 # reference: https://docs.aws.amazon.com/codedeploy/latest/userguide/application-revisions-appspec-file.html?icmpid=docs_acd_console

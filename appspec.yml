@@ -12,6 +12,12 @@ files:
   - source: ./unzip.sh
     destination: /tmp
     
+  - source: /tmp/install_docker-compose.sh
+    destination: /tmp
+  
+  - source: /tmp/run_docker-compose.sh
+    destination: /tmp
+    
 hooks:
 
 # During the BeforeInstall deployment lifecycle event, run the commands 

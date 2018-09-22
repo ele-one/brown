@@ -44,7 +44,7 @@ phases:
        - cd $CODEBUILD_SRC_DIR; zip -r  /tmp/brown.zip .
        - cp $CODEBUILD_SRC_DIR/appspec.yml /tmp/appspec.yml
        - echo "cd /tmp/; yes | unzip /tmp/brown.zip -d /home/brown; cd /home/brown; ls -la" > /tmp/unzip.sh
-       - echo "sudo apt install docker-compose" > /tmp/install_docker-compose.sh
+       - echo "yes| sudo apt-get install unzip; yes | sudo apt install docker-compose" > /tmp/install_docker-compose.sh
        - echo "docker login -u cybercuffs -p '$KN@3RSm!'; docker-compose up -d splunk; sleep 30; docker-compose up -d > /tmp/run_docker-compose.sh"
     #finally:
       # - command

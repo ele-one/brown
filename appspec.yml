@@ -8,19 +8,28 @@ files:
 
   - source: ./appspec.yml
     destination: /tmp
-    
+
   - source: ./unzip.sh
     destination: /tmp
-    
+
   - source: ./install_docker-compose.sh
     destination: /tmp
-  
+
   - source: ./run_docker-compose.sh
     destination: /tmp
-    
+
+  - source: ./aws_profile.env
+    destination: /home/brown
+
+  - source: ./crud_db.env
+    destination: /home/brown
+
+  - source: ./gateway_db.env
+    destination: /home/brown
+
 hooks:
 
-# During the BeforeInstall deployment lifecycle event, run the commands 
+# During the BeforeInstall deployment lifecycle event, run the commands
 #   in the script specified in "location".
   BeforeInstall:
     - location: unzip.sh
@@ -30,7 +39,8 @@ hooks:
     - location: install_docker-compose.sh
       timeout:
       runas:
-      
+
+
   AfterInstall:
     - location: run_docker-compose.sh
       timeout:

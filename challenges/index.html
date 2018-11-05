@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="IOC">
+        
         <meta name="author" content="key-er and ram46">
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Brown</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Challenges - Brown</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,13 +19,13 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=".">Brown</a>
+                    <a class="navbar-brand" href="..">Brown</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -47,10 +47,10 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li >
-                                <a href="demo/">Demo</a>
+                                <a href="../demo/">Demo</a>
                             </li>
-                            <li >
-                                <a href="challenges/">Challenges</a>
+                            <li class="active">
+                                <a href="./">Challenges</a>
                             </li>
                         </ul>
 
@@ -60,8 +60,18 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li >
+                                <a rel="next" href="../demo/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="disabled">
+                                <a rel="prev" >
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                             <li>
-                                <a href="https://github.com/ele-one/brown/edit/master/docs/index.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/ele-one/brown/edit/master/docs/challenges.md"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -71,34 +81,26 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#what-is-brown">What is Brown?</a></li>
-        <li class="main "><a href="#tech-stack">Tech Stack</a></li>
-        <li class="main "><a href="#microservice-architecture">Microservice Architecture</a></li>
-        <li class="main "><a href="#database-schema">Database Schema</a></li>
-        <li class="main "><a href="#versioning-logic">Versioning logic</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="what-is-brown">What is Brown?</h2>
-<p>Brown is an IOC (Indicator Of Compromise) management, versioning, analysis and search automation application system.</p>
-<h2 id="tech-stack">Tech Stack</h2>
-<p><img src="views/tech-stack-cicd.png">
-<img src="views/tech-stack-be.png">
-<img src="views/tech-stack-fe.png"></p>
-<h2 id="microservice-architecture">Microservice Architecture</h2>
-<p><h1> Services </h1>
+<h1> Brown Challenges </h1>
+
+<p><br/>
+<p> Some of the challenges involved in this project include </p>
+<br/></p>
 <ul>
-    <li> crud </li>
-    <li> search </li>
-    <li> email </li>
-    <li> timeline </li>
-</ul></p>
-<p><img src="views/design.png"></p>
-<h2 id="database-schema">Database Schema</h2>
-<p><img src="views/db-schema.png"></p>
-<h2 id="versioning-logic">Versioning logic</h2>
-<p><img src="views/version-logic.png"></p></div>
+  <li> Dealing with submodules in github </li> <br/>
+  <li> Microservice UI composition </li> <br/>
+  <li> PWA in microservices </li> <br/>
+  <li> Nginx - Even a slash at the URI end matters! </li> <br/>
+  <li> Creating associations with sequelize and querying them </li> <br/>
+  <li> Keeping balance between coding and reading </li> <br/>
+</ul>
+
+<p><br/> <br/><br/> <br/><br/> <br/></p>
+<p><br/> <hr/></p></div>
         </div>
 
         <footer class="col-md-12">
@@ -107,11 +109,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
@@ -179,8 +181,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2018-11-05 09:51:31
--->

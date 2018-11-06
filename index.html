@@ -60,9 +60,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li>
-                                <a href="https://github.com/ele-one/brown/edit/master/docs/index.md"><i class="fa fa-github"></i> Edit on GitHub</a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -72,22 +69,31 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#what-is-brown">What is Brown?</a></li>
-        <li class="main "><a href="#tech-stack">Tech Stack</a></li>
+        <li class="main "><a href="#highlights">Highlights</a></li>
         <li class="main "><a href="#microservice-architecture">Microservice Architecture</a></li>
         <li class="main "><a href="#database-schema">Database Schema</a></li>
         <li class="main "><a href="#versioning-logic">Versioning logic</a></li>
+        <li class="main "><a href="#tech-stack">Tech Stack</a></li>
+        <li class="main "><a href="#github">GitHub</a></li>
+        <li class="main "><a href="#authors">Authors</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h2 id="what-is-brown">What is Brown?</h2>
 <p>Brown is an IOC (Indicator Of Compromise) management, versioning, analysis and search automation application system.</p>
-<h2 id="tech-stack">Tech Stack</h2>
-<p><img src="views/tech-stack-cicd.png">
-<img src="views/tech-stack-be.png">
-<img src="views/tech-stack-fe.png"></p>
+<h2 id="highlights">Highlights</h2>
+<p><ul>
+    <li> Uses Splunk for logging nginx access attempts </li>
+    <li> Formulates a new way of versioning IOCs </li>
+    <li> Able to search various versions within log files </li>
+    <li> A 62% progressive web application </li>
+    <li> Makes use nginx for reverse proxying </li>
+    <li> Uses Splunk for nginx access logs </li></p>
+</ul>
+
 <h2 id="microservice-architecture">Microservice Architecture</h2>
-<p><h1> Services </h1>
+<p>It is a loosely coupled microservice architecture comprising of 4 services
 <ul>
     <li> crud </li>
     <li> search </li>
@@ -96,9 +102,25 @@
 </ul></p>
 <p><img src="views/design.png"></p>
 <h2 id="database-schema">Database Schema</h2>
+<ul>
+    <li> iocs <-many-to-many-> cases </li>
+    <li> cases <-many-to-many-> versions </li>
+</ul>
+
 <p><img src="views/db-schema.png"></p>
 <h2 id="versioning-logic">Versioning logic</h2>
-<p><img src="views/version-logic.png"></p></div>
+<p><img src="views/version-logic.png"></p>
+<h2 id="tech-stack">Tech Stack</h2>
+<p><img src="views/tech-stack-cicd.png">
+<img src="views/tech-stack-be.png">
+<img src="views/tech-stack-fe.png"></p>
+<h2 id="github">GitHub</h2>
+<p><a href="https://github.com/ele-one/brown"> https://github.com/ele-one/brown </a></p>
+<h2 id="authors">Authors</h2>
+<p><ul>
+    <li> <a href="https://github.com/ram46"> ram46 </a>  </li>
+    <li> <a href="https://github.com/key-er"> key-er </a> </li>
+</ul></p></div>
         </div>
 
         <footer class="col-md-12">
@@ -182,5 +204,5 @@
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2018-11-05 09:51:31
+Build Date UTC : 2018-11-06 06:47:11
 -->
